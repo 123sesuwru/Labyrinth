@@ -4,6 +4,11 @@ Engine::Engine(){
     init();
 }
 
+void Engine::update(){
+    movement.action();
+    my_map.update();
+}
+
 void Engine::draw(){
     window.clear(Color(0,255,0));
     my_map.map_draw(window);
@@ -12,6 +17,7 @@ void Engine::draw(){
 
 void Engine::init(){
     window.create(VideoMode(1000, 600), "Super Mario Remake from India ");
+    movement.setPlayer(my_map.getPlayer());
 
 }
 
@@ -26,5 +32,6 @@ void Engine::loop(){
 
          } 
          draw();
+         update();
     }   
 }
