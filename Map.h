@@ -17,13 +17,15 @@ class Map{
 public: 
     Map();
     void map_draw(RenderWindow& window);
+    Player* getPlayer();
+    void update();
 
 private:
     Image map_image;
     Texture map_texture;
     Sprite map_Sprite;
     void init();
-    Player player;
+    Player* player;
 
 
 String TileMap[HEIGHT_MAP] = {

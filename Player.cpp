@@ -30,3 +30,18 @@ Sprite Player::getSprite(){
 void Player::setTextureRect(IntRect rect){
     sprite.setTextureRect(rect);
 }
+
+void Player::setSpeed(Vector2f speed){
+    this -> speed = speed;
+
+}
+
+Vector2f Player::getSpeed(){
+    return speed;
+
+}
+
+void Player::update(){
+    sprite.move(speed.x , speed.y);
+    position = sprite.getPosition();
+}
