@@ -11,7 +11,7 @@ void Engine::draw(){
 }
 
 void Engine::init(){
-    window.create(VideoMode(1260, 720), "Super Mario Remake from India ");
+    window.create(VideoMode(1000, 600), "Super Mario Remake from India ");
 
 }
 

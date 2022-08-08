@@ -26,6 +26,8 @@ void Map::map_draw(RenderWindow &window){
             window.draw(map_Sprite);
 
 
+
         }
     }
+    window.draw(player.getSprite());
 }
