@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#pragma once
 #include "Player.h"
 using namespace sf;
 
