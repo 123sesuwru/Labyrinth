@@ -7,17 +7,23 @@ Engine::Engine(){
 void Engine::update(){
     movement.action();
     my_map.update();
+    my_camera-> update();
 }
 
 void Engine::draw(){
     window.clear(Color(0,255,0));
+    window.setView(my_camera-> get_view());
     my_map.map_draw(window);
     window.display();
+    
 }
 
 void Engine::init(){
     window.create(VideoMode(1000, 600), "Super Mario Remake from India ");
     movement.setPlayer(my_map.getPlayer());
+    my_camera = new Camera(my_map.getPlayer());
+
+
 
 }
 
