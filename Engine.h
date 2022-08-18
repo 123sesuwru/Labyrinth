@@ -1,9 +1,9 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Camera.h"
 #include "Map.h"
 #include "Movement.h"
-#include "Camera.h"
 
 
 using namespace sf;

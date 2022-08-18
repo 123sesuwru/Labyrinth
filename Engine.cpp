@@ -1,4 +1,5 @@
 #include "Engine.h"
+#include "Camera.h"
 
 Engine::Engine(){
     init();
@@ -7,12 +8,12 @@ Engine::Engine(){
 void Engine::update(){
     movement.action();
     my_map.update();
-    my_camera-> update();
+    my_camera->update();
 }
 
 void Engine::draw(){
     window.clear(Color(0,255,0));
-    window.setView(my_camera-> get_view());
+    window.setView(my_camera->getView());
     my_map.map_draw(window);
     window.display();
     

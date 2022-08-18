@@ -38,6 +38,6 @@ void Camera::update(){
     setCenter();
 }
 
-View Camera::get_view(){
+View Camera::getView(){
     return view;
 }

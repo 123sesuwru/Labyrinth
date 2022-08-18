@@ -18,7 +18,7 @@ private:
 public:
     Camera(Player* player);
     void update();
-    View get_view();
+    View getView();
 
 
 };
