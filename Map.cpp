@@ -4,11 +4,13 @@ void Map::init(){
     map_image.loadFromFile("images/textures.jpg");
     map_texture.loadFromImage(map_image);
     map_Sprite.setTexture(map_texture);
+    player = new Player();
+    my_coin = new Coin(Vector2f(100,100));
+
 }
 
 Map::Map(){
     init();
-    player = new Player();
 }
 
 void Map::update(){
@@ -39,5 +41,6 @@ void Map::map_draw(RenderWindow &window){
 
         }
     }
+    window.draw(my_coin->getSprite());
     window.draw(player->getSprite());
 }

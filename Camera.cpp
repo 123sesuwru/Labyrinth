@@ -1,5 +1,7 @@
 #include "Camera.h"
 using namespace sf;
+using namespace std;
+#include <iostream>
 
 
 void Camera::init(){
@@ -15,7 +17,7 @@ Camera::Camera(Player* player){
 void Camera::setCenter(){
     int player_x = player-> getPosition().x;
     int player_y = player-> getPosition().y;
-    if(player_x <LEFT_BORDER){
+    /*if(player_x <LEFT_BORDER){
         player_x = LEFT_BORDER;
     }
 
@@ -29,7 +31,11 @@ void Camera::setCenter(){
 
     if(player_y <DOWN_BORDER){
         player_y = DOWN_BORDER;
-    }
+    }*/
+
+    cout<<"X : "<<player_x<<endl;
+    cout<<"Y : "<<player_y<<endl;
+
 
     view.setCenter(player_x, player_y);
 }

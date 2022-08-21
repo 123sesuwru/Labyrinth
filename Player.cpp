@@ -11,7 +11,7 @@ void Player::init(){
     texture.loadFromImage(image);
     sprite.setTexture(texture);
     setTextureRect(IntRect(0,0,80,120));
-    setPosition(Vector2f(0,0));
+    setPosition(Vector2f(405,270));
 }
 
 Vector2f Player::getPosition(){

@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #pragma once
 #include "Player.h"
+#include "Coin.h"
 using namespace sf;
 
 const int WINDOW_WIDTH = 1260;
@@ -27,6 +28,8 @@ private:
     Sprite map_Sprite;
     void init();
     Player* player;
+    Coin* my_coin;
+
 
 
 String TileMap[HEIGHT_MAP] = {
