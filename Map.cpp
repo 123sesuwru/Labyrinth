@@ -4,8 +4,8 @@ void Map::init(){
     map_image.loadFromFile("images/textures.jpg");
     map_texture.loadFromImage(map_image);
     map_Sprite.setTexture(map_texture);
-    player = new Player();
-    my_coin = new Coin(Vector2f(100,100));
+    player = new Player(Vector2f(0,0) , "images/player1.png");
+    my_coin = new Coin(Vector2f(100,100) , "images/coin.png");
 
 }
 

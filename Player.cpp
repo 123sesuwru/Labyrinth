@@ -1,17 +1,17 @@
 #include "Player.h"
 
 
-Player::Player(){
+Player::Player(Vector2f position , String image_path):Entry(position , image_path){
     init();
+    setPosition(postion); 
+    
 }
 
 void Player::init(){
-    Image image;
-    image.loadFromFile("images/player1.png");
-    texture.loadFromImage(image);
-    sprite.setTexture(texture);
-    setTextureRect(IntRect(0,0,80,120));
-    setPosition(Vector2f(405,270));
+    setSpeed(Vector2f(0,0));
+    int width = 80;
+    int height = 120;
+    setTextureRect(IntRect(0,0,80,120)); 
 }
 
 Vector2f Player::getPosition(){

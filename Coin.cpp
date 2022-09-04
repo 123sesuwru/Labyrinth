@@ -1,7 +1,8 @@
 #include "Coin.h"
-Coin::Coin(Vector2f position){
+Coin::Coin(Vector2f position , String image_path):Entry(image_path){
     init();
     setPosition(position);
+    
     
 }
 
@@ -10,6 +11,9 @@ void Coin::init(){
     image.loadFromFile("images/coin.png");
     texture.loadFromImage(image);
     sprite.setTexture(texture);
+    int width = 32;
+    int height = 32;
+
 
 }
 
